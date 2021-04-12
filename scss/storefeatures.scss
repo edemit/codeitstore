@@ -1,0 +1,169 @@
+.storefeatures {
+    margin-top: 113px;
+    border-top: 1px solid #eeeeee;
+    overflow: hidden;
+    &__wrapper{
+        position: relative;
+        margin: 95px 0px 103px 11px;
+        border-right: 2px solid #444444;
+        border-bottom: 2px solid #444444;
+        border-left: 2px solid #444444;
+        @include __885{
+            margin-left: 0px;
+        }
+    }
+    &__slider {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 0px 90px 0px;
+        width: 100%;
+        border-right: 1px solid #a1a1a1;
+        border-bottom: 1px solid #a1a1a1;
+        border-left: 1px solid #a1a1a1;
+        &__block {
+            display: flex;
+            align-items: center;
+            width: 250px;
+            &__content {
+                margin-left: 16px;
+                &__title {
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    color: #222222;
+                    font-weight: 700;
+                }
+                &__info {
+                    font-size: 12px;
+                    color: #444444;
+                    font-weight: 700;
+                    line-height: 25px;
+                    background-position: 0% 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    transition: background-size 0.3s;
+                    &:hover{
+                        color: #e24545;
+                        background-size: 100% 2px;
+                        transition: all 0.2s;
+                    }
+                }
+            }
+            .fa.fa-headphones {
+                margin: -11px -2px 0px 3px;
+            }
+            .fa.fa-thumbs-up {
+                margin: -10px 0px 0px 0px;
+            }
+            .fa.fa-truck {
+                margin: -10px -1px 0px 4px;
+            }
+            .fa.fa-commenting {
+                margin: -12px 0px 0px 5px;
+            }
+        }
+        .block--1, .block--2, .block--3, .block--4, .block--5, .block--6, .block--3, .block--4{
+            position: absolute;
+            z-index: 2;
+        }
+        .block--1{
+            top: 23px;
+            left: 51px;
+            animation: slider 12s step-end infinite;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 56px;
+                left: 46px;
+                width: 10px;
+                height: 2px;
+                background-color: #cccccc;
+            }
+        }
+        .block--1 h3{
+            font-size: 15px;
+        }
+        .block--2{
+            top: 23px;
+            left: 306px;
+            animation: slider 12s step-end 3s infinite;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 56px;
+                left: 55px;
+                width: 10px;
+                height: 2px;
+                background-color: #cccccc;
+            }
+        }
+        .block--3{
+            top: 23px;
+            left: 593px;
+            animation: slider 12s step-end 6s infinite;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 56px;
+                left: 59px;
+                width: 10px;
+                height: 2px;
+                background-color: #cccccc;
+            }
+        }
+        .block--4{
+            top: 23px;
+            left: 880px;
+            animation: slider 12s step-end 9s infinite;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 56px;
+                left: 54px;
+                width: 10px;
+                height: 2px;
+                background-color: #cccccc;
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -3px;
+            width: 18px;
+            border-bottom: 2px solid #444444;
+            z-index: 2;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: -3px;
+            width: 18px;
+            border-bottom: 2px solid #444444;
+            z-index: 2;        
+        }
+    }
+}
+
+@keyframes slider {
+    from{
+        color: #222222;
+        left: 880px;
+    }
+    25%{
+        left: 593px;
+    }
+    50%{
+        left: 306px;
+    }
+    75%{
+        left: 51px;
+        @include __885{
+            left: 31px;
+        }
+    }
+    to{
+        z-index: -1;
+    }
+}

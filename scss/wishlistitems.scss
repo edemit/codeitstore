@@ -1,0 +1,203 @@
+.wishlist{
+    &__wrapper{
+        margin: 47px 0px 0px 0px;
+    }
+    &__top{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &__form{
+            &__input{
+                transition: all 0.2s;
+                width: 250px;
+                height: 25px;
+                border: 1px solid #444444;
+                box-shadow: inset 0 0 0 2px #a1a1a1 ;
+                outline: none;
+                font-family: "Montserrat";
+                font-weight: 700;
+                &:focus{
+                    border: 1px solid #e24545;
+                    color: #ffffff;
+                    background-color: #e24545;
+                    transition: all 0.2s;
+                }
+            }
+            &__button{
+                transition: all 0.2s;
+                width: 120px;
+                height: 38px;
+                border: 2px solid #444444;
+                box-shadow: inset 0 0 0 2px #a1a1a1 ;
+                background-color: #ffffff;
+                outline: none;
+                font-family: "Montserrat";
+                font-weight: 700;
+                &:hover{
+                    border: 2px solid #e24545;
+                    color: #ffffff;
+                    background-color: #e24545;
+                    transition: all 0.2s;
+                }
+            }
+            @include __885{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: scale(0.8);
+            }
+        }
+        &__button{
+            transition: all 0.2s;
+            display: flex;
+            justify-content: center;
+            margin: 0px -13px 0px 15px;
+            width: 120px;
+            height: 38px;
+            background-color: rgba(255,255,255,0);
+            border: 2px solid #444444;
+            box-shadow: inset 0 0 0 2px #a1a1a1 ;
+            align-items: center;
+            font-size: 12px;
+            color: #444444;
+            font-weight: 700;
+            &:hover{
+                border: 2px solid #e24545;
+                color: #ffffff;
+                background-color: #e24545;
+                transition: all 0.2s;
+            }
+            @include __1140{
+                margin-right: 0px;
+            }
+        }
+        @include __885{
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        justify-content: space-between;
+        text-align: center;
+        &__item {
+            position: relative;
+            margin: 0px -11px 51px 12px;
+            width: 263px;
+            height: 375px;
+            background-color: #ffffff;
+            border: 1px solid #eeeeee;
+            &:hover:after, &:hover:before{
+                opacity: 1;
+            }
+            &:hover{
+                background-color: #f6f6f6;
+            }
+            &::after{
+                content: "REMOVE FROM LIST";
+                transition: all 0.2s;
+                position: absolute;
+                display: flex;
+                top: 0px;
+                left: 0px;
+                width: 193px;
+                height: 250px;
+                background-color: rgba(0, 0, 0, 0.800);
+                color: #ffffff;
+                align-items: center;
+                padding-left: 68px;
+                font-size: 12px;
+                z-index: 2;
+                opacity: 0;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                width: 170px;
+                height: 40px;
+                top: 103px;
+                left: 44px;
+                border: 2px solid #ffffff;
+                box-shadow: inset 0 0 0 2px #a1a1a1 ;
+                opacity: 0;
+                z-index: 3;
+            }
+            &__png {
+                margin: 0 auto;
+                width: 262px;
+                height: 250px;
+                object-fit:scale-down;
+            }
+            .png--2, .png--3{
+            }
+            &__title {
+                position: relative;
+                margin-top: 18px;
+                margin-left: 2px;
+                font-size: 14px;
+                color: #222222;
+                font-weight: 700;
+                &::before{
+                    content: "";
+                    width: 10px;
+                    height: 2px;
+                    background-color: #e24545;
+                    position: absolute;
+                    top: -19px;
+                    left: 127px;
+                }
+            }
+            &__price {
+                margin: 7px 0px 0px 4px;
+                font-size: 16px;
+                letter-spacing: 0px;
+                color: #e24545;
+                font-weight: 700;
+                &__block{
+                    display: flex;
+                    align-items: center;
+                    margin: 6px 0px -5px 59px;
+                }
+                &__sale{
+                    margin: 6px 0px 0px 11px;
+                    font-size: 14px;
+                    text-decoration: line-through;
+                    color: #888888;
+                }
+            }
+            &__buttons{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                &__button--1, &__button--2{
+                    transition: all 0.2s;
+                    width: 40px;
+                    height: 40px;
+                    background-color: rgba(255,255,255,0);
+                    border: 1px solid #eeeeee;
+                    color: #444444;
+                    outline: 0px;
+                    &:hover{
+                        color: #ffffff;
+                        background-color: #e24545;
+                        transition: all 0.2s;
+                    }
+                    .trash, .cart{
+                        transform: scale(1.25);
+                    }
+                    .trash{
+                        padding-left: 4px;
+                    }
+                }
+            }
+            @include __885{
+                margin-left: 0px;
+            }
+        }
+        @include __885{
+            justify-content: center;
+        }
+    }
+}
